@@ -1,0 +1,8 @@
+#Tor
+https://check.torproject.org/torbulkexitlist
+
+#AWS
+https://ip-ranges.amazonaws.com/ip-ranges.json
+
+#DigitalOcean
+https://www.digitalocean.com/geo/google.csv

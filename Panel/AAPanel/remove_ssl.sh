@@ -1,0 +1,1 @@
+rm -f /www/server/panel/data/ssl.pl && /etc/init.d/bt restart

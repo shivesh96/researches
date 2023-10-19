@@ -1,0 +1,25 @@
+> in 'app/Providers/RouteServiceProvider.php'
+    
+    use Illuminate\Support\Str;
+    
+    public function map(Router $router)
+    {
+        $this->removeIndexPhpFromUrl();
+        ......
+    }    
+    
+    protected function removeIndexPhpFromUrl()
+    {
+        if (Str::contains(request()->getRequestUri(), '/index.php')) {
+            $url = str_replace('/index.php', '', request()->getRequestUri());
+            // echo request()->getRequestUri(). " - Redirecting to ". $url ."...";
+            
+            if (strlen($url) > 0) {
+                header("Location: $url", true, 301);
+                exit;
+            } else {
+                header("Location: /", true, 301);
+                exit;
+            }
+        }
+    }

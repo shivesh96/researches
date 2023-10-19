@@ -1,0 +1,53 @@
+SocksPort 0.0.0.0:1310
+HTTPTunnelPort 0.0.0.0:1312
+ControlPort 1311
+
+SocksPort 0.0.0.0:1320
+HTTPTunnelPort 0.0.0.0:1322
+ControlPort 1321
+
+SocksPort 0.0.0.0:1330
+HTTPTunnelPort 0.0.0.0:1332
+ControlPort 1331
+
+SocksPort 0.0.0.0:1340
+HTTPTunnelPort 0.0.0.0:1342
+ControlPort 1341
+
+SocksPort 0.0.0.0:1350
+HTTPTunnelPort 0.0.0.0:1352
+ControlPort 1351
+
+SocksPort 0.0.0.0:1360
+HTTPTunnelPort 0.0.0.0:1362
+ControlPort 1361
+
+SocksPort 0.0.0.0:1370
+HTTPTunnelPort 0.0.0.0:1372
+ControlPort 1371
+
+SocksPort 0.0.0.0:1380
+HTTPTunnelPort 0.0.0.0:1382
+ControlPort 1381
+
+SocksPort 0.0.0.0:1390
+HTTPTunnelPort 0.0.0.0:1392
+ControlPort 1391
+
+SocksPort 0.0.0.0:1400
+HTTPTunnelPort 0.0.0.0:1402
+ControlPort 1401
+#NewCircuitPeriod 15
+#MaxCircuitDirtiness 15
+#NumEntryGuards 8
+#CircuitBuildTimeout 5
+ExitNodes {in}
+StrictNodes 1
+#ExitRelay 0
+#RefuseUnknownExits 0
+#ClientOnly 1
+#AllowSingleHopCircuits 1
+#SafeSocks 1
+#TestSocks 1
+
+RunAsDaemon 1
