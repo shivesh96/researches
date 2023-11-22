@@ -47,6 +47,15 @@ Import:
     mysql -u root -p -e "create database database_name";
     mysql -u root -p database_name < database_name.sql
 
+    mysql -h 127.0.0.1 -uroot -p databasename < database-backup.sql.gz
+    mysql --binary-mode=1 -h 127.0.0.1 -uroot -p databasename < database-backup.sql.gz
+
+    # Using Mysql
+    mysql> use db_name;
+    mysql> SET autocommit=0 ; source the_sql_file.sql ; COMMIT ;
+    
+
+
 
 Automate Backups with Cron
     
