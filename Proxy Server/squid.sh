@@ -44,6 +44,8 @@ echo "Reloading Services, Please wait..."
 sudo ufw reload
 sudo systemctl restart squid.service
 sudo systemctl status squid.service
+
+curl -v -x username:userpass@127.0.0.1:3128 https://www.google.com/
 echo "Done"
 
 
