@@ -1,1 +1,0 @@
-clpctl db:export --databaseName=mydatabase --file=mydatabase.sql.gz
