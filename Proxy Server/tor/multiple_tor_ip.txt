@@ -1,0 +1,110 @@
+#Config in /etc/tor/torrc
+
+SocksPort 0.0.0.0:9050
+SocksPort [::]:9050
+HTTPTunnelPort 0.0.0.0:8118
+HTTPTunnelPort [::]:8118
+Socks5Proxy 127.0.0.1:9050
+HTTPTunnelPort 127.0.0.1:8118
+
+
+SocksPort 0.0.0.0:1010
+ControlPort 1011
+
+
+SocksPort 0.0.0.0:1020
+ControlPort 1021
+
+
+SocksPort 0.0.0.0:1030
+ControlPort 1031
+
+SocksPort 0.0.0.0:1040
+ControlPort 1041
+
+
+SocksPort 0.0.0.0:1050
+ControlPort 1051
+
+
+SocksPort 0.0.0.0:1060
+ControlPort 1061
+
+SocksPort 0.0.0.0:1070
+ControlPort 1071
+
+SocksPort 0.0.0.0:1080
+ControlPort 1081
+
+
+SocksPort 0.0.0.0:1090
+ControlPort 1091
+
+
+SocksPort 0.0.0.0:1100
+ControlPort 1101
+
+
+SocksPort 0.0.0.0:1110
+ControlPort 1111
+
+SocksPort 0.0.0.0:1120
+ControlPort 1121
+
+SocksPort 0.0.0.0:1130
+ControlPort 1131
+
+SocksPort 0.0.0.0:1140
+ControlPort 1141
+
+SocksPort 0.0.0.0:1150
+ControlPort 1151
+
+SocksPort 0.0.0.0:1160
+ControlPort 1161
+
+SocksPort 0.0.0.0:1170
+ControlPort 1171
+
+SocksPort 0.0.0.0:1180
+ControlPort 1181
+
+SocksPort 0.0.0.0:1190
+ControlPort 1191
+
+SocksPort 0.0.0.0:1200
+ControlPort 1201
+
+SocksPort 0.0.0.0:1210
+ControlPort 1211
+
+SocksPort 0.0.0.0:1220
+ControlPort 1221
+
+SocksPort 0.0.0.0:1230
+ControlPort 1231
+
+SocksPort 0.0.0.0:1240
+ControlPort 1241
+
+SocksPort 0.0.0.0:1250
+ControlPort 1251
+
+SocksPort 0.0.0.0:1260
+ControlPort 1261
+
+SocksPort 0.0.0.0:1270
+ControlPort 1271
+
+SocksPort 0.0.0.0:1280
+ControlPort 1281
+
+SocksPort 0.0.0.0:1290
+ControlPort 1291
+
+SocksPort 0.0.0.0:1300
+ControlPort 1301
+
+
+UseBridges 1
+BridgeRelay 1

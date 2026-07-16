@@ -1,0 +1,85 @@
+#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+#!/bin/bash
+
+RED="31"
+GREEN="32"
+BOLDGREEN="\e[1;${GREEN}m"
+ITALICRED="\e[3;${RED}m"
+ENDCOLOR="\e[0m"
+
+#echo -e "${BOLDGREEN}::::::STATUS:::::::${BOLDGREEN}"
+service tor status | grep 'active (exited)' > /dev/null 2>&1
+
+if [ $? != 0 ]
+then
+    sudo service tor restart > /dev/null
+    echo "TOR: Restarted"
+#else
+#    echo "TOR: OK"
+fi
+
+service mysql status | grep 'active (running)' > /dev/null 2>&1
+
+if [ $? != 0 ]
+then
+    sudo service mysql restart > /dev/null
+    echo "MySQL: Restarted"
+#else
+#    echo "MySQL: OK"
+fi
+
+service nginx status | grep 'active (running)' > /dev/null 2>&1
+
+if [ $? != 0 ]
+then
+    sudo service nginx restart > /dev/null
+    echo "NginX: Restarted"
+#else
+#    echo "NginX: OK"
+fi
+
+service php-fpm-74 status | grep 'active (running)' > /dev/null 2>&1
+
+if [ $? != 0 ]
+then
+    sudo service php-fpm-74 restart > /dev/null
+    echo "PHP-7.4: Restarted"
+#else
+#    echo "PHP-7.4: OK"
+fi
+
+service php-fpm-80 status | grep 'active (running)' > /dev/null 2>&1
+
+if [ $? != 0 ]
+then
+    sudo service php-fpm-80 restart > /dev/null
+    echo "PHP-8.0: Restarted"
+#else
+#    echo "PHP-8.0: OK"
+fi
+
+
+service php-fpm-81 status | grep 'active (running)' > /dev/null 2>&1
+if [ $? != 0 ]
+then
+    sudo service php-fpm-81 restart > /dev/null
+    echo "PHP-8.1: Restarted"
+#else
+#    echo "PHP-8.1: OK"
+fi
+
+service redis status | grep 'active (running)' > /dev/null 2>&1
+
+if [ $? != 0 ]
+then
+    sudo service redis restart > /dev/null
+    echo "Redis-Server: Restarted"
+#else
+#    echo "Redis-Server: OK"
+fi
+echo "----------------------------------------------------------------------------"
+endDate=`date +"%Y-%m-%d %H:%M:%S"`
+echo "★[$endDate] Successful"
+echo "----------------------------------------------------------------------------"
